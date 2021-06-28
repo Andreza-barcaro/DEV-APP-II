@@ -1,0 +1,27 @@
+//Variáveis
+
+void main() {
+  
+  //Varáveis
+  var nome = "Maria da Silva";
+  var idade = "24 anos";
+  var endereco = "Rua ABC, 56";
+  
+  //Saída dos dados
+  //usando método print
+  print(nome);
+  print(idade);
+  print(endereco);
+  
+  
+  //Saída concatenada 
+  print(nome + idade + endereco);
+  
+  //Saída concatenada com quebra de linha
+  print("Nome: $nome\n"
+        "Idade: $idade\n"
+        "Endereço: $endereco");
+ 
+}
+
+

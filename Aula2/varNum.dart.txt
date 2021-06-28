@@ -1,0 +1,33 @@
+
+void main() {
+  
+  //Variáveis do tipo number
+  
+  /*
+   * varriável num pode receber inteiros
+   * e pontos flutuantes
+   */
+  num pi = 3;
+  pi = 3.14;
+  print(pi);
+  
+  //Var do tipo int só pode receber num inteiros
+  int valor = 3;
+  valor = 3; 
+  print(valor);
+  
+  //Var double pode receber núm inteiros e ponto flutuante
+  double valor1 = 3;
+  valor1 = 3.5; 
+  print(valor1);
+  
+  //Somado
+  print(pi + valor + valor1);
+  
+  //concatenado 
+  print("Valor de PI: $pi\n"
+        "Valor: $valor\n"
+        "Valor 2: $valor1");
+  
+}
+
