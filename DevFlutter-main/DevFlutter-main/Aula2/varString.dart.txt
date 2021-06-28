@@ -1,0 +1,22 @@
+
+void main() {
+  
+  //Var do tipo String
+  String nome_usuario = "Joana";
+  String sobrenome_usuario = "Silva";
+  String altura = "1,70";
+  
+  //uso do print concatenado
+  print("Nome: $nome_usuario\n"
+        "Sobrenome: $sobrenome_usuario\n"
+        "Altura: $altura");
+  
+  print("----------------------");
+  
+  //outra alternativa
+  print("Nome: " + nome_usuario + "\n" +
+        "Sobrenome: " + sobrenome_usuario + "\n"+ 
+        "Altura: " + altura);
+    
+}
+
