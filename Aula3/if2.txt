@@ -1,0 +1,17 @@
+void main() {
+  
+ //declaração da variável de número
+  int idade = 16;
+  
+  /*
+   * utilização do IF (SE) para definição da condição
+   * SE o usuário tiver idade superior ou igual a 18 ele
+   * pode acessar o "sistema". ELSE (SENÃO), o programa 
+   * retornará o aviso de que não pode acessar o conteúdo
+   */    
+  if(idade >= 18) {
+    print("Seja Bem Vindo");
+    }else{
+    print("Você não pode acessar este conteúdo");
+  }
+}

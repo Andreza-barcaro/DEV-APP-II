@@ -1,0 +1,32 @@
+void main() {
+  
+  //calculadora
+  //Declaração das var
+  double a = 12;
+  double b = 11;
+  String operador = '/';
+  
+  //estrutura condicional
+  switch(operador)
+  {
+    case '+':
+      print(a + b);
+      break;
+      
+    case '-':
+      print(a - b);
+      break;
+      
+    case '/':
+      print(a / b);
+      break;
+      
+    case '*':
+      print(a * b);
+      break;
+      
+    default:
+      print('Sem cálculo!');
+  }  
+  
+}

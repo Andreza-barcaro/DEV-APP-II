@@ -1,0 +1,25 @@
+void main() {
+  
+  String linguagem = "Dart";
+  
+  switch (linguagem) {
+    case "Dart":
+      print("É Dart!");
+      break;
+      
+    case "Java":
+      print("É Java!");
+      break;
+      
+    case "Java":
+      print("É Java!");
+      break;
+      
+    case "C#":
+      print("É C#!");
+      break;
+      
+    default:
+      print("Outro!");
+  } 
+}
