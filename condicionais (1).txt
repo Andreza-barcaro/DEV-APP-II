@@ -1,0 +1,50 @@
+//Condicionais
+//Exemplo 1
+void main() {
+  double nota = 7.0;
+
+  if (nota < 5) {
+    print("Reprovado");
+  } else if (nota == 10.0) {
+    print("Aprovado com louvor");
+  } else {
+    print("Aprovado");
+  }
+}
+
+-------------------------------------------------
+//Exemplo 2 - Ternário
+
+void main(){ 
+  bool aprovado = true;
+  String info;
+
+  info = aprovado ? "Aprovado" : "Reprovado"; 
+
+  print(info);
+}
+
+------------------------------------------
+//Exemplo 3 - SwitchCase
+
+void main() {
+  String linguagem = "Dart";
+
+  switch (linguagem) {
+    case "Dart":
+      print("É Dart!!");
+      //Cada cláusula de case não vazio termina com uma instrução break, como regra.
+      break;
+    case "Java":
+      print("É Java!!");
+      break;
+    default:
+      print("Outro");
+  }
+}
+
+
+
+
+
+
