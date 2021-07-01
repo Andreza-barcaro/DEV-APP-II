@@ -1,0 +1,256 @@
+void main() {
+  //Map colocar os valores entre {}
+  var user_pass = {'Usuário':'Paulo','Senha': '@123#'};
+  print(user_pass);
+  
+  
+  var usuario = new Map();
+  
+  //inserção de chave:valor no Map
+  usuario['usuario'] = 'admin';
+  usuario['Senha'] = 'admin123';
+  
+  print(usuario);
+  
+  
+  
+  
+}
+
+
+void main() {
+  
+  Map<int, String> professores ={
+    111 : 'Andreza',
+    222 : 'Bryan',
+    333 : 'Paulo',
+  };
+  
+  var alunos = {
+    02 : 'Josiel',
+    07 : 'Francisca',
+    10 : 'Jocelito',
+  };
+  
+  const capital_pais = {
+    'Bruxelas': 'Belgica',
+    'Londres' : 'Inglaterra',
+    'Moscou' : 'Rússia',
+  };
+  
+  print(professores);
+  print(alunos);
+  print(capital_pais);
+}
+
+
+void main() {
+  var user = new Map();
+  user['Username'] = 'admin';
+  user['Password'] = 'admin@123';
+  
+  print(user);
+  
+  user['Email'] = 'fulano@ibest.com';
+   print(user);
+  
+  Map<int, String> atores = new Map();
+  atores[1] = 'John Travolta';
+  print(atores);
+  
+  
+}
+
+
+void main() {
+  var user = new Map();
+  user['Username'] = 'admin';
+  user['Password'] = 'admin@123';
+
+  user['Username'] = 'idea';
+  user['Password'] = 'idea@123';
+  
+  print(user);
+  //remover elementos que comecem com a letra i
+  user.removeWhere((key, value) => value.startsWith('i'));
+
+  print(user);
+
+  user['Email'] = 'fulano@ibest.com';
+  print(user);
+
+  Map<int, String> atores = new Map();
+  atores[1] = 'John Travolta';
+  print(atores);
+
+  atores.remove(1);
+  print(atores);
+}
+
+
+void main() {
+
+  var animais = {
+    'Cachorro' : 'Rex',
+    'Gato' : 'frajola',
+    'Rato' : 'Jerry',
+   };
+  
+  print(animais);
+  
+  animais.removeWhere((key, value) => key.endsWith('to'));
+  
+  print(animais);
+  
+}
+
+
+void main() {
+
+ var usuario = new Map();
+  
+ usuario['usuario'] = "bilu";
+ usuario['senha'] = "admin1234";
+ usuario['cargo'] = "gerente";
+  
+  var novoDados = {'nome': 'joao', 'sobrenome': 'Silva'};  
+ 
+  usuario.addAll(novoDados);
+  
+  print(usuario);
+  
+  usuario.clear();
+  print(usuario);
+  
+  
+  
+}
+
+
+
+void main() {
+//criando lista não ordenada de elementos únicos
+ var marca = <String> {'Ford', 'Fiat', 'Volkswagem'};
+  
+  //Criando um Set vazio
+  Set<String> modelo = {};
+  
+  print(marca is Set);//verificar se é um Set
+  print(marca);
+  print(modelo is Set);
+  print(modelo);
+  
+Set<String> modeloPop = {'Corsa', 'Uno', 'Gol'};
+  
+  modelo.addAll(modeloPop);
+  
+  print(modelo);
+  
+}
+
+Estrutura de Decisão
+
+void main() {
+
+  double idade = 30;
+  
+  if(idade < 18){
+    
+    print('Menor idade');
+  }else{
+    print('Pode ter Habilitação');
+  }
+  
+  
+}
+
+
+void main() {
+const int primeiro_valor = 98;
+const int segundo_valor = 70; 
+const bool e_maior = primeiro_valor > segundo_valor;
+const bool sao_iguais = primeiro_valor == segundo_valor;
+  
+  if(e_maior){
+    print("o primeiro valor é maior");
+  }else if(sao_iguais){
+    print("os valores são iguais");
+  }else{
+    print("O segundo valor é maior que o primeiro");
+  }
+ 
+  
+  
+}
+void main() {
+int n1 = 7;
+int n2 = 9;
+int n3 = 10;
+double  media;
+  
+media = (n1+n2+n3)/3;
+  
+if(media >= 7 ){
+  print("Aprovado"); 
+}else{
+  print("Reprovada");
+}
+   
+}
+
+
+void main() {
+
+  int idade = 60;
+  
+  if(idade == 12){
+    print('criança');
+  }else if(idade <= 12 && idade <= 18){
+    print('Adolescente');
+  }else if(idade <= 30 && idade <= 60){
+    print('Adulta');
+  }else{
+    print('Idosa');
+  }
+  
+   
+}
+
+void main() {
+  int menu = 2;
+
+  String usuario = 'teste';
+  String senha = '123';
+
+  switch (menu) {
+    case 1:
+      print('Cadastro de clientes');
+      if (usuario == 'teste' && senha == '123') {
+        print("bem vindo ao cadastro de clientes");
+      } else {
+        print("verifique Usuario e senha");
+      }
+      break;
+
+    case 2:
+      print('cadastro de fornecedores');
+      if (usuario == 'teste' && senha == '123') {
+        print("bem vindo ao cadastro de fornecedores");
+      } else {
+        print("verifique Usuario e senha");
+      }
+      break;
+
+    case 3:
+      print('cadastro de Produto');
+      if (usuario == 'teste' && senha == '123') {
+        print("bem vindo ao cadastro de Produto");
+      } else {
+        print("verifique Usuario e senha");
+      }
+      break;
+
+    default:
+      print("Menu Inválido");
+  }
+}
