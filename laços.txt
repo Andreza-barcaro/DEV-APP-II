@@ -1,0 +1,45 @@
+------FOR---------
+
+void main() {
+  for (int i = 0; i < 5; i++) {
+    print('Repetindo a instrução ${i + 1}  vez(es)');
+  }
+}
+---------------------------
+
+void main() {
+  for(int x = 0; x < 100; x ++) {
+    print("Valor:  + $x");
+  }
+}
+
+--------------------------------
+void main() {
+  for(int i = 0; i <= 20; i += 2) {
+    print(i);
+  }
+}
+
+-------------------------------
+void main() {
+  for(int i = 200; i >= 1; i -= 5) {
+    print(i);
+  }
+}
+
+-------------------------------
+void main() {
+  const List numeros_primos = [2, 3, 5, 7, 11];
+  for (int num in numeros_primos) {
+    print(num);
+  }
+}
+============================================
+While
+--------------------------------------
+
+
+
+
+
+

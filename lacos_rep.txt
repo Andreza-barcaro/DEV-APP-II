@@ -1,0 +1,84 @@
+//For
+void main() {
+  int soma = 0;
+  String res = "0";
+  
+  for(int i = 1; i <= 18; i++) {
+    res += " ${i + 1}";
+    soma = soma + i + 1;
+    
+    print("$res = $soma");
+  } 
+  
+ 
+}
+
+---------------------------------------------
+void main() {
+  int maior = 0;
+  
+  for(int i = 0; i <= 6; i++) {
+    print("Valores: " + i.toString());
+    
+    maior = i;
+    
+    if(i >= maior) {
+     //
+    }
+  }
+  
+   print("Maior é: e " + maior.toString());  
+ 
+}
+---------------------------------------------
+//while
+void main() {
+  
+  int i = 1;
+  
+  while(i < 10) {
+    print("Exibe o núm: $i");
+    i++;
+  }
+ 
+}
+
+--------------------------------------------
+
+void main() {
+  
+  int i = 50;
+  
+  while(i >= 10) {
+    print(i);
+    
+    i--;  
+  }
+ 
+}
+-------------------------------------------
+void main() {
+  
+ int x = 0;
+  
+  do{
+    print("Valor: $x");
+    x++;
+  }
+  
+  while(x <= 20);
+ 
+}
+
+-----------------------------------------
+void main() {
+  
+  const List numeros_list = [2,3,4,5,7,5,34,56,24,12];
+  for (int num in numeros_list){
+    print(num);
+  }
+  
+
+}
+
+
