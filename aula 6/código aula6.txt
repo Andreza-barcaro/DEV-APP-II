@@ -1,0 +1,257 @@
+void main() {
+
+  String vazia = '';
+  // retorna true se objeto está vazio
+  print(vazia.isEmpty);
+  
+  
+  String str = "Olá turma";
+  //se tiver elementos retorna false
+  print(str.isEmpty);
+  
+  
+  
+}
+
+void main() {
+  
+  String nome_de_usuario ="Roberto Baggio";
+  //essa propriedade retorna a quantidade de caracteres ou seja tamanho 
+  print("A string possui ${nome_de_usuario.length} caracteres");
+ 
+  
+}
+
+
+void main() {
+  
+  String nome_de_usuario ="Roberto Baggio";
+  //essa propriedade retorna a quantidade de caracteres ou seja tamanho 
+  print("A string possui ${nome_de_usuario.length} caracteres");
+  
+ 
+  //descobrir se ou atring possui uma ouyra string como parte de seu conteúdo
+  //caso encontre a string retorna true caso congtrário retorna false
+  String conteudo = "Essa turma e fera demaiis !!!";
+  print(conteudo.contains("String"));
+  
+  //encontra  se a string começa ou não com aquela palavra ou com caracter.
+  String texto = "O Google é um motor de busca mais famoso do mundo";
+  print(texto.startsWith("G"));
+
+}
+  
+  void main() {
+ 
+  //Retorna parte do conteúdo de inicio ou término de um conteúdo.
+  String conteudo = " O google e um motor de pesquisa mais famoso do mundo";
+  String prefixo = "o bing é um ";
+  String sufixo = conteudo.substring(11,26);
+  print("$prefixo $sufixo");
+}
+
+
+void main(List args) {
+  
+  // metódo que faz a divisão da String 
+  var b = "Faça da sua vida um sonho e do sonho a realidade";
+  print(b.split(" "));
+}
+
+
+void main() {
+  String turma = "Turma de flutter";
+  String turno = "galera da tarde";
+  String frase = "LUTE PELO SEUS SONHOS";
+  //toUpperCase traz em maiusculo os caracteres
+  //toLowerCase retona minusculo
+  print("${turma.toUpperCase()}\n  $turno\n ${frase.toLowerCase()}" );
+  
+}
+
+
+
+void main() {
+  String turma = "Turma de flutter";
+  String turno = "galera da tarde";
+  String frase = "LUTE PELO SEUS SONHOS";
+  //toUpperCase traz em maiusculo os caracteres
+  //toLowerCase retona minusculo
+  print("${turma.toUpperCase()}\n  $turno\n ${frase.toLowerCase()}" );
+  
+  //retira espaços do início e final de string
+  String str = '\n\n\t \t So o que é bom dura o bastante para se tonar inesquecível';
+  String result = str.trim();
+  print(result);
+}
+
+
+void main() {
+  
+  String mensagem = "A persistência é o caminho do êxito";
+  //se tiver elementos retorna false
+  
+  //tira espaço em branco no final
+  print("***" + mensagem.trimRight() + "***");
+  //tira do início espaço em branco
+  print("***" + mensagem.trimLeft() + "***");
+  //retira epaço em branco
+  print("***" + mensagem.trim() + "***");
+  
+  
+}
+
+void main() {
+  StringBuffer sb = new StringBuffer('Website');
+
+  sb.write('vamos');
+  sb.writeCharCode(46);
+  sb.writeln('aprender');
+  sb.write('Tags: ');
+  sb.writeAll({'Dart', 'Flutter'}, ',');
+
+  print('length: ${sb.length}');
+  print('isEmpty: ${sb.isEmpty}');
+  print('IsNoEmpty: ${sb.isNotEmpty}');
+  print('------------ ${sb.toString()} \n------------');
+
+  print('Clear the buffer');
+  sb.clear();
+}
+
+
+
+laço de repetição
+
+void main() {
+  
+  for( int indice = 1; indice < 10; indice++){
+    print("Voltas n° $indice");
+  }
+
+  
+   for( int i = 0; i < 5; i++){
+    print(i);
+  }
+
+  
+  //incremento 
+   for(int i = 0; i<=10; i+=2)
+   {
+    print(i);
+  }
+
+}
+
+
+void main() {
+ 
+   //incremento de 5 em 5
+   for(int i = 120; i>=80; i-=5)
+   {
+    print(i);
+  }
+  
+}
+
+
+void main() {
+ 
+   //incremento de 5 em 5
+   for(int i = 120; i>=80; i-=5)
+   {
+    print(i);
+  }
+  
+  
+   //tabuada do 5
+   for(int i = 0; i<=50; i+=5)
+   {
+    print(i);
+  }
+  
+  int soma = 0;
+  String result ='0';
+  
+  for(int i = 1; i <= 10; i++){
+    result += ' ${i +1}';
+    soma = soma + i +1;
+    print('$result = $soma');
+  }
+  
+  
+}
+
+void main() {
+ 
+  const List numeros_primos = [2, 3, 5, 7, 11];
+  
+  //in usado para percorrer a propriedade dos objetos
+  for(int num in numeros_primos ){
+    print(num);
+  }
+ 
+  
+  
+}
+
+
+void main() {
+ 
+  const List numeros_primos = [2, 3, 5, 7, 11];
+  
+  //in usado para percorrer a propriedade dos objetos
+  for(int num in numeros_primos ){
+    print(num);
+  }
+ 
+  
+  
+  int controlador = 1;
+  
+  while (controlador < 10){
+    print("Voltas n° $controlador");
+    controlador++;
+  }
+  
+  
+  
+  int i = 0;
+  
+  while(i <=10){
+    
+    print(i);
+    i++;
+  }
+  
+}
+
+
+
+void main() {
+  for (int i = 0; i < 5; i++) {
+    print('Repetindo a instrução ${i + 1}  vez(es)');
+  }
+}
+---------------------------
+
+void main() {
+  for(int x = 0; x < 100; x ++) {
+    print("Valor:  + $x");
+  }
+}
+
+--------------------------------
+void main() {
+  for(int i = 0; i <= 20; i += 2) {
+    print(i);
+  }
+}
+
+-------------------------------
+void main() {
+  for(int i = 200; i >= 1; i -= 5) {
+    print(i);
+  }
+}
+
