@@ -1,0 +1,284 @@
+Métodos String
+
+
+void main() {
+ 
+  String vazia = '';
+  // verifica se objeto está vazio
+  print(vazia.isEmpty);
+  
+  //verifica se objeto não está vazio
+  String str = "Olá turma ";
+  print(str.isNotEmpty);
+  
+  //retorna o número de caracteres da informação de entrada
+  String nome_de_usuario = "fernanda";
+  print('A string possui ${nome_de_usuario.length} caracteres}');
+  
+  
+  //caso encontre a String retornará true senão retorna false
+  String a = "Essa turma e fera demais!!!!";
+  print(a.contains("String"));
+  
+}
+
+
+void main() {
+ 
+  String txt = "DartPad é uma ferramenta de código aberto";
+  //verifica String que começa
+  print(txt.startsWith("D"));
+  //verifica as String que termina
+  print(txt.endsWith("código aberto"));
+    
+    
+    String conteudo = " O google é o motor de busca mais famoso do mundo";
+  String prefixo = " O bing é um ";
+  
+  //retorna parte do conteúdo de acordo com a configuração de ponto início e ponto término
+  String sufixo = conteudo.substring(11, 26);
+  print("$prefixo $sufixo");
+}
+
+
+void main() {
+ 
+  //divide uma String em partes diferentes
+  String filmes = "O poderoso chefão, A lista de Schindler, Um sonho de Liberdade";
+  List<String> lista_de_filmes = filmes.split(',');
+  print(lista_de_filmes);
+  //transforma para maiúsculos
+  print(filmes.toUpperCase());
+  
+  
+}
+
+
+void main() {
+ 
+  //divide uma String em partes diferentes
+  String filmes = "O poderoso chefã,A lista de Schindler, Um sonho de Liberdade";
+  String  turno = "TARDE NOITE";
+  List<String> lista_de_filmes = filmes.split(',');
+  print(lista_de_filmes);
+  
+  //transforma para maiúsculos
+  print(filmes.toUpperCase());
+  //transforma para minúsculo
+  print(turno.toLowerCase());
+  
+  
+  String messagem = "A persistência é o caminho do êxito";
+  // espaços a direita em branco
+  print("***" + messagem.trimRight() + "***");
+  // espaço a esquerda
+  print(" *** " + messagem.trimLeft() + "***");
+  // espaços em ambos os lados
+  print("***" + messagem.trim() + "***");
+  
+    
+  num numero_infinito = double.infinity;
+  num valor_de_pi = 3.14159265358977793;
+    
+  //verifica se o número é finito retona true senão false.
+  print(numero_infinito.isFinite);
+  print(valor_de_pi.isFinite);
+  
+}
+
+
+
+void main() {
+   
+  num numero_infinito = double.infinity;
+  num valor_de_pi = 3.14159265358977793;
+    
+  //verifica se o número é finito retona true senão false.
+  print(numero_infinito.isFinite);
+  print(valor_de_pi.isFinite);
+  
+  
+  int posNum = 10;
+  int negNum = -9;
+  
+  //verifica se o número e negativo se sim true senão false
+  print(posNum.isNegative);
+  print(negNum.isNegative);
+  
+  
+  double n1 = 12.023;
+  double n2 = 12.09;
+  
+  //arredonda um valor númerico
+  var value = n1.round();
+  print(value);
+  
+  
+  int n3 = 30;
+  //transformar um valor em alfanumérico
+  var res = n3.toDouble();
+  print("Output = ${res}");
+  
+  
+  
+  double n4 = 7.5;
+  //valor alfanúmerico em valor inteiro
+  var sa = n4.toInt();
+  print("Output = ${sa}");
+  
+  
+}
+
+
+Estrutura de repetição
+
+
+void main() {
+  for (int i = 0; i < 5; i++) {
+    print('hello ${i + 1}');
+  }
+  
+  for (int i = 0; i < 5; i++) {
+    print(i);
+  }
+
+
+
+void main() {  
+  
+  //fazendo o decremento 
+    for (int i = 10; i >= 8; i--) {
+    print(i);
+  }
+  
+  
+  //fazendo decremento 5 em 5
+    for (int i = 120; i >= 80; i-=5) {
+    print(i);
+  }
+  
+  
+}
+
+void main() {  
+  int soma = 0;
+  String result = '0';
+  
+  for( int i = 1; i <= 10; i++){
+    result += ' ${i+1} ';
+    soma = soma + i + 1;
+    print('$result = $soma');
+  }
+  
+}
+
+void main() {  
+
+  //Leu 8 valores inteiro e verificou qual deles é o maior apresentando na tela para o usuário
+  int maior = 0;
+  
+  for(int i = 0; i<=8; i++){
+    print('Valores:' + i.toString());
+    
+    
+    maior = i;
+    
+    if(i >= maior){
+      
+    }
+  }
+  
+  print('Maior é o:' + maior.toString());
+}
+
+
+void main() {  
+
+  const List numeros_primos = [2, 5, 7, 11];
+  for(int num in numeros_primos){
+    print(num);
+  }
+
+}
+
+void main() {  
+
+  int controladora = 1;
+  while(controladora < 10){
+    print("Voltas n° $controladora");
+    controladora++;
+  }
+
+}
+
+
+  int controladora = 1;
+  while(controladora < 10){
+    print("Voltas n° $controladora");
+    controladora++;
+  }
+
+  int e = 20;
+  
+  while(e <= 50){
+    print(e);
+    //incrementando em 2 em 2
+    e+=2;
+  }
+  
+  
+  void main() {  
+
+   int d = 20;
+  
+  while(d >= 10){
+    print(d);
+    //incrementando em 2 em 2
+    d--;
+    
+  }
+  
+  
+  
+    int f = 20;
+  
+  while(f >= 10){
+    print(f);
+    //incrementando em 2 em 2
+    f-=2;
+    
+  }
+}
+
+
+void main() {  
+
+  
+int k = 0;
+  //faça
+  do{
+    print(k);
+    //incrementando
+    k++;
+    //repetição de 0 a 10
+  }while(k<10);
+  //enquanto
+  
+  
+}
+
+void main() {  
+
+  
+int i = 1;
+  //faça
+  do{
+    print('$i');
+    
+    i += 2;
+   
+  }while(i<=100);
+  //enquanto
+  
+  
+}
