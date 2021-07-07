@@ -1,0 +1,68 @@
+
+Funções
+
+void main() {
+ 
+  double resMult = calcMult(10.0, 15.0);
+  print(resMult);
+  
+}
+
+//função com parâmetro com retorno 
+double calcMult(double a, double b ){
+  double res = a * b;
+  
+  return res;
+}
+-------------------------------------------------
+void main() {
+  //chamo a função para execução
+   boasVindas();
+   double resSimulador =simulador(56.55, 47.80);
+    print(resSimulador);
+}
+
+//função sem retorno e sem parâmetro  
+void boasVindas(){
+  String nome = 'Lucas';
+  print('Bem vindos' + nome);
+}
+
+//função com retorno e com parâmetro
+double simulador(double valor1, double valor2){
+  double resposta = valor1 + valor2;
+  return resposta;
+}
+----------------------------------------------------------
+
+void main() {
+  print(calAreaCirculo(5.0));
+  printIntro();
+  
+}
+
+//função com parâmetro com retorno
+double calAreaCirculo(double raio) => 3.14 * raio *raio;
+
+//função sem parâmetro sem retorno
+void printIntro(){
+  print("Aprendendo função");
+   print("Linguagem Dart");
+}
+-----------------------------------------------
+
+//parâmetro opcional
+void main() {
+  
+  num res = somarNumeros(10, 20, 30);
+  print(res);
+  
+}
+//utilizamos par de colchetes [] para declarar parâmetro opcional
+num somarNumeros(num n1, num n2,[num? n3]) {
+  if(n3 != null){
+    return n1 + n2 + n3;
+  }
+  
+  return n1 + n2;
+}
