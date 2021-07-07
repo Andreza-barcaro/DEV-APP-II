@@ -1,0 +1,177 @@
+Revisão funções
+
+void main() {
+
+  printIntro();
+  
+}
+//Função sem parâmetro
+//não tem retorno 
+void printIntro(){
+  
+  print("Seja bem vindo a revisão");
+  
+}
+
+
+void main() {
+
+ double resMult = calcMult(5.0, 12.0);
+  print(resMult);
+}
+
+//função que tem retorno e tem parâmetro
+double calcMult(double ca, double ce){
+  double res = ca * ce;
+  return res;
+}
+
+-----------------------------------------
+
+void main() {
+
+ double resMult = calcMult(20.0, 15.0);
+  print(resMult);
+}
+
+//função que tem retorno e tem parâmetro
+double calcMult(double b, double f){
+  double res = b / f;
+  return res;
+}
+
+----------------------------------------------
+
+void main() {
+
+num res = somarNumeros(40, 60, );
+  print(res);
+  
+}
+
+//Parâmetro opcional
+num somarNumeros(num n1, num n2, [num? n3]){
+  if(n3 != null){
+    return n1 + n2 + n3;
+  }
+  return n1 + n2;
+  
+}
+--------------------------------
+
+void main() {
+//função opcional 
+  criarBotao("botão Sair", cor: "Azul", largura: 20.0);
+
+  
+}
+
+void criarBotao( String texto, {String? cor, double? largura}){
+  print(texto);
+  print(cor);
+  print(largura);
+  
+}
+-----------------------------------------
+void main() {
+//função opcional 
+  criarBotao("botão Sair");
+
+  
+}
+
+void criarBotao( String texto, {String? cor, double? largura}){
+  print(texto);
+  //?? para definir valor interno na função
+  print(cor ?? "preto");
+  print(largura ?? 10.0);
+  
+}
+--------------------------------------------
+void main() {
+  //na ordem correta
+  print(imprimirSaudacao("Anderson", "M"));
+  
+  
+   print(imprimirSaudacao("Michele", "F"));
+  
+  
+}
+
+String imprimirSaudacao(String nome, String genero) => (genero == "M") ? "Bem vindo Sr. $nome" : "Bem vindo Sr(a).$nome";
+------------------------------------------------
+
+import "dart:math";
+//importando a biblioteca math
+
+const PI = 3.14159265;
+double raioEsfera = 5;
+
+void main() {
+  
+  print('RAIO DA ESFERA = $raioEsfera');
+  print('Circunferência -> ${circunferencia().toStringAsFixed(2)} em');
+  print('Area -> ${area().toStringAsFixed(2)} cm²');
+  print('Volume -> ${volume().toStringAsFixed(2)} cm³');
+}
+
+double circunferencia(){
+  return 2 * PI * raioEsfera;
+}
+
+double area(){//pow retorna o resultado da potência
+  return PI * pow(raioEsfera, 2);
+}
+
+double volume(){
+  return (4/3) * PI * pow(raioEsfera, 3);
+}
+
+--------------------------------------------
+import "dart:math";
+//importando a biblioteca math
+
+void main() {
+List<int> lista =[18, 19, 21, 22];
+  
+  //busca menor valor 
+  print("O menor número da lista né: ${(lista.reduce(min))}");
+  //busca o makior valor
+  print("O maio número da lista né: ${(lista.reduce(max))}");
+  
+}
+--------------------------------------
+import 'dart:math' as Math;
+//importando a biblioteca math
+
+void main() {
+//sqrt raiz quadrada
+  print("A Raiz quadrada de 9 é: ${Math.sqrt(9)}");
+  print("A Raiz quadrada de 16 é: ${Math.sqrt(16)}");
+
+  print("A Raiz cúbica de 8 é: ${Math.pow(8, (1 / 3))}");
+  print("A Raiz cúbica de 27 é: ${Math.pow(27, (1 / 3))}");
+
+  print("Raiz de cinco do número 3125 = ${Math.pow(3125, (1 / 5))}");
+}
+--------------------------------------------
+import 'dart:convert' as Convert;
+//importando a biblioteca math
+
+void main() {
+  
+  Map<String,  String> mapRegistro = {'011': "Barcaro", '022': "Donini",
+                                    '033': "Neukamp", '044': "jung"};
+  
+  //converter Map em JSON
+  dynamic jsonObj = Convert.jsonEncode(mapRegistro);
+  
+  print(mapRegistro is Map);
+  print(mapRegistro);
+  print(jsonObj is Map);
+  print(jsonObj);
+
+}
+
+
+
