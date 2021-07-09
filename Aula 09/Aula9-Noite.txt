@@ -1,0 +1,170 @@
+Orientação a Objeto
+
+class Casa{
+  int numero = 123;
+  String cor = "Azul";
+  
+}
+
+
+
+void main() {
+  Casa home = Casa();
+  Casa beachHome = Casa();
+  
+  
+  //print(home.cor);
+  //print(home.numero);
+  
+  print('${home.cor} ${home.numero}');
+  print('${beachHome.cor} ${beachHome.numero}');
+
+  
+  
+}
+--------------------------------------------------------
+class Casa{
+  int numero;
+  String cor;
+  
+}
+
+
+void main() {
+  Casa home = Casa();
+  Casa beachHome = Casa();
+  
+  home.cor = "Amarelo";
+  home.numero = 2234;
+  
+  beachHome.cor = "Amarrom";
+  beachHome.numero = 3456;
+  
+
+  print('${home.cor} ${home.numero}');
+  print('${beachHome.cor} ${beachHome.numero}');
+  
+}
+-----------------------------------------------------------
+class Pessoa{
+  int idade;
+  String nome;
+  double altura;
+  
+  
+  void dormir(){
+    print('$nome esta dormindo!!');
+  }
+  
+  
+  void aniver(){
+    idade++;
+  }
+  
+}
+
+void main() {
+  
+  Pessoa pessoa1 = Pessoa();
+  
+  pessoa1.nome = "Diego";
+  pessoa1.altura = 1.72;
+  pessoa1.idade = 30;
+  
+  print(pessoa1.nome);
+  pessoa1.aniver();
+  pessoa1.dormir();
+  print(pessoa1.idade);
+
+}
+
+-----------------------------------------------------------
+class Usuario{
+  
+  String nome = "Rafael";
+  String senha = '7890';
+  
+ 
+  void usuarioAutenticado(){
+    if(nome == "Amanda" && senha == "7890"){
+      print("Usuário logado");
+    }else{
+      print('Usuário não logado');
+    }
+  }
+}
+
+void main() {
+  
+Usuario a = new Usuario();
+  
+  a.usuarioAutenticado();
+
+}
+--------------------------------------------------------------
+class Pessoa{
+  String _nome;
+  int _idade;
+  double _altura;
+  
+  
+  //método construtor receber 3 parâmetros
+  Pessoa(this._nome, this._idade, this._altura);
+  
+  
+  Pessoa.nascer(this._nome, this._altura){
+    _altura = 10;
+    print('$_nome nasceu');
+    
+  }
+  
+  void comer(){
+    print('$_nome  já comeu!!');
+  }
+  
+  void aniver(){
+    print('Parabens $_nome');
+    _idade++;
+  }
+  
+}
+
+int get idade{
+  return idade;
+}
+
+double get altura{
+  return altura;
+}
+
+  
+set altura(double altura){
+  if(altura >0.0 && altura < 3.0){
+    altura = altura;
+  }
+}
+  
+ void main(){
+   Pessoa p1 = Pessoa('Cláudio', 30, 1.89);
+   Pessoa p2 = Pessoa('Marcela', 28, 1.98);
+   
+   print('Nome: ${p1._nome}');
+   print('Nome: ${p2._nome}');
+   
+   print('idade da: ${p1._nome} : ${p1._idade}');
+    print('idade da: ${p2._nome} : ${p2._idade}');
+   
+   
+   p2.comer();
+   p1.comer();
+   
+   
+   Pessoa nene = Pessoa.nascer('Enzo', 0.325);
+    print('Nome: ${nene._nome}');
+   print('idade: ${nene._idade}');
+   
+   nene._altura = 2.0;
+   print('Altura ${nene._altura}');
+ 
+ }
+-------------------------------------------------------------------------

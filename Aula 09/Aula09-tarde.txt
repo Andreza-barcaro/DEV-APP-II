@@ -1,0 +1,168 @@
+Orientação A objeto
+
+class Casa{
+  //atributos da classe (propriedades da classe)
+ int numero = 123;
+ String cor = "Azul";
+  
+}
+
+void main() {
+ Casa home =  new Casa();
+  
+  print(home.cor);
+  print(home.numero);
+  
+}
+-----------------------------------------------------------
+class Casa{
+  //atributos da classe (propriedades da classe)
+ int numero = 123;
+ String cor = "Azul";
+  
+}
+
+void main() {
+  //instanciando objeto
+ Casa home =  new Casa();
+ Casa beachHome = Casa();
+  
+  //print(home.cor);
+  //print(home.numero);
+  
+  
+  //imprimindo os atributos dos objetos
+ print('${home.cor} ${home.numero}');
+ print('${beachHome.cor} ${beachHome.numero}');
+  
+  
+}
+-------------------------------------------------------------
+class Casa{
+  //atributos da classe (propriedades da classe)
+ int numero;
+ String cor;
+  
+}
+
+void main() {
+  //instanciando objeto
+ Casa home =  Casa();
+ Casa beachHome = Casa();
+  
+ //para atribuir valores diferentes aos objetos
+  
+  home.cor = 'Branco';
+  home.numero = 111;
+  
+  beachHome.cor = 'Verde';
+  beachHome.numero = 222;
+  
+  
+  //imprimindo os atributos dos objetos
+ print('${home.cor} ${home.numero}');
+ print('${beachHome.cor} ${beachHome.numero}');
+  
+  
+}
+----------------------------------------------------------------
+class Animal{
+  
+  //atributos
+  String nome;
+  double peso;
+
+//método construtor  
+//Animal(this.nome, this.peso);
+  
+//this instância classe método ou constutor
+//método
+void comer(){
+  print("$nome comeu!");
+}
+
+//método
+void fazerSom(){
+  print("$nome fez som!");
+}
+}
+
+void main(){
+  
+  
+  Animal cachorro1 = Animal();
+  cachorro1.nome = "RexMel";
+  cachorro1.peso = 14.0;
+  
+  
+  Animal gato = Animal();
+  gato.nome = "Fufu";
+  gato.peso = 15.0;
+  
+  print(cachorro1.nome);
+  print(cachorro1.peso);
+  
+  print(gato.nome);
+  print(gato.peso);
+  
+  cachorro1.fazerSom();
+  cachorro1.comer();
+  
+  
+  gato.fazerSom();
+  gato.comer();
+}
+--------------------------------------------------------
+//nome da classe
+class Usuario{
+  
+  String nome = "Amanda";
+  String senha = "12348";
+  
+  
+  //método para autenticar
+ void usuarioAutenticado(){
+   
+   if(nome == "Amanda" && senha == "12348"){
+     print("Usuário logado");
+   }else{
+     print("Usuário não está logado");
+   }
+   
+ }
+  
+}
+void main(){
+  Usuario a = new Usuario();//primeiro objeto
+  
+  //chamando o método para imprimir
+  a.usuarioAutenticado();
+}
+------------------------------------------------------------
+class Animal{
+  String _nome;
+  String _cor;
+
+//método
+Animal(String paramNome, String paramCor){
+  this._nome = paramNome;
+  this._cor = paramCor;
+  
+}
+
+  //método para pegar os atributos privados
+  String get getNome{
+    return this._nome;
+  }
+  
+  String get getCor{
+  return this._cor;
+  }  
+  
+}
+
+void main(){
+  Animal dog = Animal("Zebra", "Preto e branco");
+  print("Animal: ${dog.getNome} | ${dog.getCor}");
+
+}
